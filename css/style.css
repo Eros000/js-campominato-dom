@@ -12,9 +12,52 @@
 */
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url(https://wallpapercosmos.com/w/full/5/3/f/194354-3840x2160-desktop-4k-outer-space-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
 }
 
 .container {
+    padding-top: 50px;
+    text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.grid-container{
+    padding-top: 100px;
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+
+.grid-container > .cell {
+    width: 10%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border: 3px solid purple;
+    background-color: gold;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.grid-container > .cell.active {
+    background-color: lightskyblue;
+}
+
+button{
+    width: 120px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: darkseagreen;
+    color: brown;
 }
