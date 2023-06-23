@@ -54,6 +54,10 @@ body {
     background-color: lightskyblue;
 }
 
+.grid-container > .cell.mine {
+    background-color: red;
+}
+
 button{
     width: 120px;
     height: 60px;

@@ -8,6 +8,51 @@ myButton.addEventListener ('click', function (){
     const myContainer = document.querySelector('.grid-container');
     myContainer.innerHTML = ''
 
+    
+
+    for (let index = 1; index <= 100; index++) {
+    
+        const myCell = document.createElement ('div');
+        myCell.classList.add('cell');
+        myCell.append(index)
+    
+        myCell.addEventListener ('click', function (){
+    
+            if(myCell == randomMines()){
+                myCell.classList.toggle('mine');
+                console.log(this.innerHTML)
+            }
+            else{
+                myCell.classList.toggle('active');
+                console.log(this.innerHTML)
+            }
+    
+        });
+
+    
+        myContainer.append(myCell);
+    }
+
+
+    
+
+    
+
+});
+
+
+
+
+/* 
+    FUNCTIONS
+*/
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+
+function randomMines () {
+
     const mine = 16;
     const randomMines = [];
 
@@ -25,32 +70,5 @@ myButton.addEventListener ('click', function (){
 
     console.log('randomMines', randomMines, typeof randomMines);
     console.log('Per riempire l\'array ci sono volute', index, 'esecuzioni');
-
-    for (let index = 1; index <= 100; index++) {
-    
-        const myCell = document.createElement ('div');
-        myCell.classList.add('cell');
-        myCell.append(index)
-    
-        myCell.addEventListener ('click', function (){
-    
-            this.classList.toggle('active');
-            console.log(this.innerHTML)
-    
-        });
-
-        myContainer.append(myCell);
-    }
-
-});
-
-
-
-
-/* 
-    FUNCTIONS
-*/
-function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
